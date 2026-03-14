@@ -5,21 +5,21 @@ import { ChevronLeft, ChevronRight, Flower2, Leaf } from 'lucide-react';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=2000",
+    image: "/Carousal1.png",
     label: "Spring Awakening",
     title: "Floral Essence",
     subtitle: "A bouquet of fresh morning dew",
     badge: "New"
   },
   {
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000",
+    image: "/carousal2.png",
     label: "Pastel Dreams",
     title: "Rose Petals",
     subtitle: "Soft, delicate, and timeless",
     badge: "Premium"
   },
   {
-    image: "https://images.unsplash.com/photo-1464333086629-f938c1a01f62?auto=format&fit=crop&q=80&w=2000",
+    image: "/Carousal3.png",
     label: "Fresh Garden",
     title: "Sage & Mint",
     subtitle: "Crisp notes of a summer morning",
@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-start">
       <AnimatePresence mode="wait">
-        <motion.div 
+        <motion.div
           key={current}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -51,9 +51,9 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="absolute inset-0 z-0"
         >
-          <img 
-            src={slides[current].image} 
-            alt={slides[current].title} 
+          <img
+            src={slides[current].image}
+            alt={slides[current].title}
             className="h-full w-full object-cover object-[70%_center]"
             referrerPolicy="no-referrer"
           />
@@ -87,19 +87,19 @@ const Hero = () => {
                 {slides[current].badge}
               </span>
             </div>
-            
+
             <h1 className="text-5xl md:text-8xl font-serif text-luxe-paper leading-tight mb-8">
-              {slides[current].title.split(' ')[0]} <br /> 
+              {slides[current].title.split(' ')[0]} <br />
               <span className="italic font-light text-luxe-accent">{slides[current].title.split(' ')[1]}</span>
             </h1>
-            
+
             <p className="text-sm md:text-lg text-luxe-paper/70 max-w-xl mb-12 font-light leading-relaxed tracking-wide uppercase">
               {slides[current].subtitle}
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-start gap-6">
-              <Link 
-                to="/collections" 
+              <Link
+                to="/collections"
                 className="group relative px-10 py-4 overflow-hidden border border-luxe-accent text-[11px] uppercase tracking-[0.3em] font-semibold text-luxe-paper transition-all duration-500 rounded-full"
               >
                 <div className="absolute inset-0 bg-luxe-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -123,7 +123,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
