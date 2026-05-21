@@ -1,16 +1,35 @@
-# Run and deploy your AI Studio app
+# Amorist Luxe
 
-This contains everything you need to run your app locally.
+A premium, high-end luxury **perfume boutique** experience — sophisticated visuals, rich product
+storytelling, and engaging product interactions.
 
-View your app in AI Studio: https://ai.studio/apps/cc46caa7-d0fe-402b-b4cb-768b4a1b7b94
+> Note: this is one of three repos that contain the Amorist Luxe codebase
+> (also in `CODE_hex1` and `CODE_hex`). Consider consolidating.
 
-## Run Locally
+## Stack
 
-**Prerequisites:**  Node.js
+- React + TypeScript + Vite
+- Tailwind CSS
+- `@google/genai` (Gemini SDK) — AI-assisted features
+- `better-sqlite3` — local persistence
+- React Router, Framer Motion, `lucide-react`
+- Express (small server-side endpoints)
 
+## Run locally
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+cp .env.example .env.local       # add your GEMINI_API_KEY
+npm run dev
+```
+
+## Project layout
+
+```
+.
+├── index.html
+├── src/                  React app
+├── public/               static assets
+├── metadata.json         AI Studio app metadata
+└── vite.config.ts
+```
